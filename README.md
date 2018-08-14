@@ -58,4 +58,10 @@ mnistspace部分为自定义名称 <br>
 ```
 select*from mnist-table
 ```
-即可显示每一次图片的添加时间、名称和识别结果
+即可显示每一次图片的添加时间、名称和识别结果 <br>
+
+参考自：
+```
+https://hub.docker.com/_/cassandra/
+```
+
