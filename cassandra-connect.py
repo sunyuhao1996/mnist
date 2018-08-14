@@ -33,7 +33,7 @@ def createKeySpace():
 
         log.info("creating table...")
         session.execute("""
-            CREATE TABLE IF NOT EXISTS mnistable (
+            CREATE TABLE IF NOT EXISTS mnist-table (
                 upload_time text,
                 image_name text,
                 recognize_number text,
@@ -51,7 +51,7 @@ def insertdata(argv):
     current_time=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     try:
         session.execute(
-            "INSERT INTO mnistable (upload_time, image_name, recognize_number) VALUES (%s, %s, %s)", [current_time, argv[1], argv[2]]
+            "INSERT INTO mnist-table (upload_time, image_name, recognize_number) VALUES (%s, %s, %s)", [current_time, argv[1], argv[2]]
            
     except Exception as e:
         log.error("Unable to insert data")
